@@ -25,6 +25,10 @@ https://jungsunpark1.github.io/fineday-gangwon/
 
 <br>
 
+## 프로젝트 진행 과정 정리 및 문제 해결 과정
+
+https://bit.ly/3P7Xbfw
+
 ## 개발 환경
 
 <p align="justify">
@@ -42,8 +46,24 @@ https://jungsunpark1.github.io/fineday-gangwon/
 
 ## 기술 스택
 
-
+|  HTML   |  CSS   |  React   | JavaScript |
+| :-----: | :----: | :------: | :--------: |
+| ![html] | ![css] | ![react] |   ![js]    |
 
 <br>
 
 ## 구현 기능
+
+### 기능 1
+
+ <br>
+  <img src="./introduce/slides/slide1.PNG">
+  <br>
+
+
+<!--  -->
+
+[js]: ./introduce/icons/javascript.svg
+[html]: ./introduce/icons/html.svg
+[css]: ./introduce/icons/css.svg
+[react]: ./introduce/icons/react.svg
