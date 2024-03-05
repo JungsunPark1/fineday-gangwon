@@ -54,30 +54,67 @@ https://bit.ly/3P7Xbfw
 
 ## 구현 기능
 
-#### 메인 페이지 1 기능
+#### 홈 페이지 1 기능
 
  <br>
   <img src="./introduce/slides/slide1.png">
   <br>
 
-#### 메인 페이지 1 상세 코드
+#### 홈 페이지 1 상세 코드
 
    <br>
   <img src="./introduce/slides/slide2.png">
   <br>
 
-#### 메인 페이지 2 기능
+#### 홈 페이지 2 기능
 
    <br>
   <img src="./introduce/slides/slide3.png">
   <br>
 
-#### 메인 페이지 2 상세 코드
+#### 홈 페이지 2 상세 코드
 
    <br>
   <img src="./introduce/slides/slide4.png">
   <br>
 
+
+#### 메인 - 차트 페이지 기능
+
+   <br>
+  <img src="./introduce/slides/slide5.png">
+  <br>
+
+#### 메인 - 차트 페이지 상세 코드
+
+   <br>
+  <img src="./introduce/slides/slide6.png">
+  <br>
+
+
+#### 메인 - 기록 페이지 기능
+
+   <br>
+  <img src="./introduce/slides/slide7.png">
+  <br>
+
+#### 메인 - 기록 페이지 상세 코드
+
+   <br>
+  <img src="./introduce/slides/slide/8.png">
+  <br>
+
+  #### 기록 작성 페이지 기능
+
+   <br>
+  <img src="./introduce/slides/slide9.png">
+  <br>
+
+#### 기록 수정 페이지 기능
+
+   <br>
+  <img src="./introduce/slides/slide10.png">
+  <br>
 <!--  -->
 
 [js]: ./introduce/icons/javascript.svg
