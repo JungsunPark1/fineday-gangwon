@@ -92,16 +92,16 @@ https://bit.ly/3P7Xbfw
   <br>
 
 
-#### 메인 - 기록 페이지 기능
+#### 메인 - 기록 리스트 페이지 기능
 
    <br>
   <img src="./introduce/slides/slide7.png">
   <br>
 
-#### 메인 - 기록 페이지 상세 코드
+#### 메인 - 기록 리스트 페이지 상세 코드
 
    <br>
-  <img src="./introduce/slides/slide/8.png">
+  <img src="./introduce/slides/slide8.png">
   <br>
 
   #### 기록 작성 페이지 기능
