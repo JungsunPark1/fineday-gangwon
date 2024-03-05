@@ -57,9 +57,8 @@ https://bit.ly/3P7Xbfw
 ### 기능 1
 
  <br>
-  <img src="./introduce/slides/slide1.PNG">
+  <img src="./introduce/slides/slide1.png">
   <br>
-
 
 <!--  -->
 
