@@ -1,4 +1,4 @@
-#강원도 맑은 날에
+# 강원도 맑은 날에
 
 <p align="center">
   <br>
@@ -13,7 +13,7 @@ https://jungsunpark1.github.io/fineday-gangwon/
 ## 프로젝트 목표
 
 <p align="justify">
-맑은 날 떠나고 싶은 도시인들을 위해 강원도 주요 여행지 5곳의 실시간 미세먼지 수치가 가장 적은 지역추천하고 과거 미세먼지 수치를 그래프로 한눈에 확인 할 수 있습니다. 맑은 날 떠나는 여행 기록 컨셉으로 기획, 디자인, 구현까지 반응형 웹 사이트로 완성했습니다.</p>
+맑은 날 떠나고 싶은 도시인들을 위해 강원도 주요 여행지 5곳을 선정해 실시간 미세먼지 수치가 가장 적은 지역을 추천합니다. 지역별 과거 미세먼지 수치를 그래프로 확인 하고 기록을 남기는 컨셉으로 기획, 디자인, 구현까지 반응형 웹 사이트로 완성했습니다.</p>
 
 <br>
 
@@ -54,17 +54,28 @@ https://bit.ly/3P7Xbfw
 
 ## 구현 기능
 
-### 기능 1 
-#### 메인 페이지 
+#### 메인 페이지 1 기능
 
  <br>
   <img src="./introduce/slides/slide1.png">
   <br>
 
-### 메인 페이지 상세 코드
+#### 메인 페이지 1 상세 코드
 
    <br>
   <img src="./introduce/slides/slide2.png">
+  <br>
+
+#### 메인 페이지 2 기능
+
+   <br>
+  <img src="./introduce/slides/slide3.png">
+  <br>
+
+#### 메인 페이지 2 상세 코드
+
+   <br>
+  <img src="./introduce/slides/slide4.png">
   <br>
 
 <!--  -->

@@ -210,7 +210,7 @@ const DiaryList = ({ selectedRegion }) => {
     console.log('params', filters, sorter, extra);
   };
 
-  const onEdit = () => {};
+  // const onEdit = () => {};
 
   return (
     <ConfigProvider

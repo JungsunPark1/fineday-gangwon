@@ -307,7 +307,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
         diary => diary.id !== originData.id
       );
       saveToLocalStorage(filteredDiaries);
-      navigate('/main', { replace: true });
+      navigate('/man', { replace: true });
     }
   };
 

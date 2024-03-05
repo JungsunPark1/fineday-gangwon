@@ -220,7 +220,7 @@ const SpotSuggestion = ({ pageType }) => {
     {
       // onSuccess ->useQuery에서 사용함. 비동기 요청 성공시 실행되는 콜백함수 정의!
       onSuccess: data => {
-        // 데이터 fetch 성공 시, Recoil Atom 업데이트, 5개 지역 로컬스토리지 저장
+        // 데이터 fetch 성공 시, Recoil Atom 업데이트
         if (data && data.length > 0) {
           let fiveSpot = filterGangwonDustData(data);
           // console.log(fiveSpot);
