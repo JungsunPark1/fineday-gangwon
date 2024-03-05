@@ -54,10 +54,17 @@ https://bit.ly/3P7Xbfw
 
 ## 구현 기능
 
-### 기능 1
+### 기능 1 
+#### 메인 페이지 
 
  <br>
   <img src="./introduce/slides/slide1.png">
+  <br>
+
+### 메인 페이지 상세 코드
+
+   <br>
+  <img src="./introduce/slides/slide2.png">
   <br>
 
 <!--  -->
