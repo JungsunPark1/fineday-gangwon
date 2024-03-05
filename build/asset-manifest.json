@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/fineday-gangwon/static/css/main.adf76929.css",
+    "main.js": "/fineday-gangwon/static/js/main.8ca61a9d.js",
+    "static/media/SongMyung-Regular.ttf": "/fineday-gangwon/static/media/SongMyung-Regular.1bfcd536436055354fb6.ttf",
+    "static/media/Sunflower-Medium.ttf": "/fineday-gangwon/static/media/Sunflower-Medium.e76a775371fbf8a35896.ttf",
+    "static/media/Sunflower-Light.ttf": "/fineday-gangwon/static/media/Sunflower-Light.9dfe528a4ce079ccf982.ttf",
+    "static/media/Sunflower-Bold.ttf": "/fineday-gangwon/static/media/Sunflower-Bold.125b8a2a9ee158e0476e.ttf",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/fineday-gangwon/static/media/Montserrat-VariableFont_wght.7e687123cd4528224ce5.ttf",
+    "index.html": "/fineday-gangwon/index.html",
+    "main.adf76929.css.map": "/fineday-gangwon/static/css/main.adf76929.css.map",
+    "main.8ca61a9d.js.map": "/fineday-gangwon/static/js/main.8ca61a9d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adf76929.css",
+    "static/js/main.8ca61a9d.js"
+  ]
+}
