@@ -42,9 +42,7 @@ https://jungsunpark1.github.io/fineday-gangwon/
 
 ## 기술 스택
 
-|  HTML   |  CSS   |  React   | JavaScript |
-| :-----: | :----: | :------: | :--------: |
-| ![html] | ![css] | ![react] |   ![js]    |
+
 
 <br>
 
