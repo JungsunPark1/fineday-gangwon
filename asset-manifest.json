@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fineday-gangwon/static/css/main.adf76929.css",
-    "main.js": "/fineday-gangwon/static/js/main.401ae7a6.js",
+    "main.js": "/fineday-gangwon/static/js/main.680a7b53.js",
     "static/media/SongMyung-Regular.ttf": "/fineday-gangwon/static/media/SongMyung-Regular.1bfcd536436055354fb6.ttf",
     "static/media/Sunflower-Medium.ttf": "/fineday-gangwon/static/media/Sunflower-Medium.e76a775371fbf8a35896.ttf",
     "static/media/Sunflower-Light.ttf": "/fineday-gangwon/static/media/Sunflower-Light.9dfe528a4ce079ccf982.ttf",
@@ -9,10 +9,10 @@
     "static/media/Montserrat-VariableFont_wght.ttf": "/fineday-gangwon/static/media/Montserrat-VariableFont_wght.7e687123cd4528224ce5.ttf",
     "index.html": "/fineday-gangwon/index.html",
     "main.adf76929.css.map": "/fineday-gangwon/static/css/main.adf76929.css.map",
-    "main.401ae7a6.js.map": "/fineday-gangwon/static/js/main.401ae7a6.js.map"
+    "main.680a7b53.js.map": "/fineday-gangwon/static/js/main.680a7b53.js.map"
   },
   "entrypoints": [
     "static/css/main.adf76929.css",
-    "static/js/main.401ae7a6.js"
+    "static/js/main.680a7b53.js"
   ]
 }
