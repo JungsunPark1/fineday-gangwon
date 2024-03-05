@@ -8,7 +8,7 @@ const Container = styled.div`
   max-width: 100vw;
   // 아래 두개가 필수적인 스크롤 이벤트 핵심 프로퍼티
   max-height: 100vh;
-  overflow-y: ${({ isMobile }) => (isMobile ? 'hidden' : 'auto')};
+  overflow-y: auto;
   //
   display: flex;
   flex-direction: column;
@@ -37,8 +37,6 @@ const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   // Carousel에 대한 참조 추가(슬라이더)
   const carouselRef = useRef(null);
-  //모바일일때 화면전환 애니메이션 바꾸기
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,29 +55,13 @@ const Home = () => {
       }
     };
 
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
     const container = containerRef.current;
-
     if (container) {
       container.addEventListener('scroll', handleScroll);
-      window.addEventListener('resize', handleResize);
-      return () => {
-        // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
-        container.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('resize', handleResize);
-      };
+      // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+      return () => container.removeEventListener('scroll', handleScroll);
     }
-  }, [isMobile]);
-
-  useEffect(() => {
-    // 스크롤이 20px 이상일 때 모바일이 아닌 경우에만 SecondHomeContainer로 자동 전환
-    if (!isMobile && isScrolled) {
-      carouselRef.current.goTo(1, false); // 1은 SecondHomeContainer
-    }
-  }, [isMobile, isScrolled]);
+  }, []);
 
   return (
     <Container ref={containerRef}>
