@@ -1,10 +1,8 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 import MainView from './components/MainView';
 import Header from '../../components/commonComponents/Header';
-import Footer from '../../components/commonComponents/Footer';
 
 const Container = styled.div`
   display: flex;

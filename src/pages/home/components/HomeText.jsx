@@ -1,6 +1,6 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Container = styled.div`
   background-color: rgba(251, 246, 244, 1);

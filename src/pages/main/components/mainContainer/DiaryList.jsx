@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { Table, ConfigProvider } from 'antd';
 import { getStringFullDate } from '../../../../lib/utils/string_date';
 
-const Container = styled.div`
-  overflow-y: auto;
-`;
+// const Container = styled.div`
+//   overflow-y: auto;
+// `;
 
 // 일기 테이블 커스텀
 const CustomTable = styled(Table)`

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/commonComponents/Header';
 import SpotSuggestion from '../../components/commonComponents/SpotSuggestion';

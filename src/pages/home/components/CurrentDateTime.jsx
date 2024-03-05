@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { getHangeulDate, getStringDay } from '../../../lib/utils/string_date';
+import { getHangeulDate } from '../../../lib/utils/string_date';
 
 const Container = styled.div`
   width: 100%;

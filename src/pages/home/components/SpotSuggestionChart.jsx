@@ -20,8 +20,7 @@ import {
   calcAverageDust,
 } from '../../../lib/utils/apiLocationData';
 import {
-  convertLocationName,
-  locationAtoms,
+  convertLocationName
 } from '../../../lib/utils/apiLocationData';
 
 const Container = styled.div`

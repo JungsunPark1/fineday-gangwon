@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate} from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { useQuery } from 'react-query';
 import { useSetRecoilState, useRecoilValue } from 'recoil';
@@ -212,7 +212,9 @@ const SpotSuggestion = ({ pageType }) => {
   const setSokchoCurrent = useSetRecoilState(sokchoCurrentAtom);
   const currentSpot = useRecoilValue(currentSpotAtom);
 
-  const { data, isError, isLoading, refetch } = useQuery(
+
+  //const { data, isError, isLoading, refetch } = useQuery(
+  const { refetch } = useQuery(
     'dustData',
     fetchDustData,
     {
@@ -228,9 +230,10 @@ const SpotSuggestion = ({ pageType }) => {
           const gangneungValue = gangneungData ? gangneungData[1] : '0';
 
           // 데이터의 value가 숫자가 아닐 경우
-          fiveSpot.map(([name, value]) => {
+          fiveSpot.forEach(spot => {
+            const [name, value] = spot;
             const replaceValue = isNaN(parseInt(value, 10))
-              ? gangneungValue
+              ? parseInt(gangneungValue, 10)
               : parseInt(value, 10);
 
             // 각각의 recoil atom 업데이트

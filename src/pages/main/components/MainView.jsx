@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import queryString from 'query-string';
 import styled from 'styled-components';
-import { Select, Tabs, DatePicker, ConfigProvider } from 'antd';
-import dayjs from 'dayjs';
+import { Select, Tabs} from 'antd';
 
 import { useRecoilValue } from 'recoil';
 import { currentSpotAtom } from '../../../lib/recoil/atom/currentSpot';

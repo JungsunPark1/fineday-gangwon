@@ -76,23 +76,23 @@ const CurrentSpotWeather = () => {
   const [locationName, dustLevel] = currentSpotInfo;
   const coordinates = coordinateInfo[locationName]; // 지역 이름에 해당하는 좌표
 
-  let message;
-  const text = [
-    '몹시 맑고 깨끗한 날이에요 ✨',
-    '야외 활동하기 무리가 없는 날입니다 🚴‍♀️',
-    '실내위주의 여행은 어떠세요? 🫧',
-    '맑은 날이 오기를 함께 기다려 보실까요? 🌈',
-  ];
+  // let message;
+  // const text = [
+  //   '몹시 맑고 깨끗한 날이에요 ✨',
+  //   '야외 활동하기 무리가 없는 날입니다 🚴‍♀️',
+  //   '실내위주의 여행은 어떠세요? 🫧',
+  //   '맑은 날이 오기를 함께 기다려 보실까요? 🌈',
+  // ];
 
-  if (dustLevel < 30) {
-    message = text[0];
-  } else if (dustLevel > 30 && dustLevel < 80) {
-    message = text[1];
-  } else if (dustLevel > 80 && dustLevel < 150) {
-    message = text[2];
-  } else {
-    message = text[3];
-  }
+  // if (dustLevel < 30) {
+  //   message = text[0];
+  // } else if (dustLevel > 30 && dustLevel < 80) {
+  //   message = text[1];
+  // } else if (dustLevel > 80 && dustLevel < 150) {
+  //   message = text[2];
+  // } else {
+  //   message = text[3];
+  // }
 
   //지역 날씨 api 데이터 가져오기
   const {

@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import SpotSuggestionChart from './components/SpotSuggestionChart';
 import HomeText from './components/HomeText';
-import Footer from '../../components/commonComponents/Footer';
 
 const Container = styled.div`
   width: 100%;
