@@ -1,12 +1,13 @@
 # 강원도 맑은 날에
 
 ![Alt Text](./introduce/project.gif)
+<b>프로젝트 미리보기</b>
 
-<p align="center">
+<!-- <p align="center">
   <br>
   <img src="./introduce/fineday-gangwon-main.png">
   <br>
-</p>
+</p> -->
 
 ## 프로젝트 URL
 
