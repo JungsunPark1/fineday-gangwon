@@ -123,6 +123,9 @@ https://bit.ly/3P7Xbfw
    <br>
   <img src="./introduce/slides/slide10.png">
   <br>
+
+  ![Alt Text](./introduce/project.gif)
+
 <!--  -->
 
 [js]: ./introduce/icons/javascript.svg
