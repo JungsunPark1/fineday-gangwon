@@ -1,7 +1,7 @@
 # 강원도 맑은 날에
 
-![Alt Text](./introduce/project.gif)
-<b>프로젝트 미리보기</b>
+![Alt Text](./introduce/project1.gif)
+<b>프로젝트 미리보기 </b>
 
 <!-- <p align="center">
   <br>
