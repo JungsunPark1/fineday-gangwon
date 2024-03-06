@@ -38,7 +38,7 @@ https://bit.ly/3P7Xbfw
   <br>
 - <b>Language</b>: React, Html5, CSS3, JavaScript
   <br>
-- <b> Library & Framework: React Query, Nivo chart, Ant design, Recoil, etc  </b>
+- <b> Library & Framework </b>: React Query, Nivo chart, Ant design, Recoil, etc 
   <br>  
 - <b>버전관리 시스템</b>	: Git
   <br>
