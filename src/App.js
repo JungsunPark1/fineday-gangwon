@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { QueryClient, QueryClientProvider } from 'react-query';
 // 글로벌 스타일 만들기 위한 createGlobalStyle 불러오기
@@ -36,7 +36,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <RecoilRoot>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <GlobalStyles />
           <Routes>
             <Route path='/' element={<Home />} />
@@ -44,7 +44,7 @@ function App() {
             <Route path='/newDiary' element={<NewDiary />} />
             <Route path='/editDiary/:diaryId' element={<EditDiary />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </RecoilRoot>
     </QueryClientProvider>
   );
