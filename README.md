@@ -1,5 +1,7 @@
 # 강원도 맑은 날에
 
+![Alt Text](./introduce/project.gif)
+
 <p align="center">
   <br>
   <img src="./introduce/fineday-gangwon-main.png">
@@ -50,11 +52,13 @@ https://bit.ly/3P7Xbfw
   <br>
 </p>
 
+<br>
+
 ## 기술 스택
 
-|  HTML   |  CSS   |  React   | JavaScript |
-| :-----: | :----: | :------: | :--------: |
-| ![html] | ![css] | ![react] |   ![js]    |
+|  HTML   |  CSS   |  React   | JavaScript |  Node   |
+| :-----: | :----: | :------: | :--------: | :-----: |
+| ![html] | ![css] | ![react] |   ![js]    | ![node] |
 
 <br>
 
@@ -125,3 +129,4 @@ https://bit.ly/3P7Xbfw
 [html]: ./introduce/icons/html.svg
 [css]: ./introduce/icons/css.svg
 [react]: ./introduce/icons/react.svg
+[node]: /images/stack/node.svg
