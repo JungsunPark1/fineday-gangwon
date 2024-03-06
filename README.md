@@ -66,51 +66,49 @@ https://bit.ly/3P7Xbfw
   <img src="./introduce/slides/slide2.png">
   <br>
 
-#### 홈 페이지 2 기능
+#### 📍 홈 페이지 2 기능
 
    <br>
   <img src="./introduce/slides/slide3.png">
   <br>
 
-#### 홈 페이지 2 상세 코드
+#### 📍 홈 페이지 2 상세 코드
 
    <br>
   <img src="./introduce/slides/slide4.png">
   <br>
 
-
-#### 메인 - 차트 페이지 기능
+#### 📍 메인 페이지 - 차트 기능
 
    <br>
   <img src="./introduce/slides/slide5.png">
   <br>
 
-#### 메인 - 차트 페이지 상세 코드
+#### 📍 메인 페이지 - 차트 상세 코드
 
    <br>
   <img src="./introduce/slides/slide6.png">
   <br>
 
-
-#### 메인 - 기록 리스트 페이지 기능
+#### 📍 메인 페이지 - 기록 리스트 기능
 
    <br>
   <img src="./introduce/slides/slide7.png">
   <br>
 
-#### 메인 - 기록 리스트 페이지 상세 코드
+#### 📍 메인 페이지 - 기록 리스트 상세 코드
 
    <br>
   <img src="./introduce/slides/slide8.png">
   <br>
 
-  #### 기록 작성 페이지 기능
+#### 📍 기록 작성 페이지 기능
 
    <br>
   <img src="./introduce/slides/slide9.png">
   <br>
 
-#### 기록 수정 페이지 기능
+#### 📍 기록 수정 페이지 기능
 
    <br>
   <img src="./introduce/slides/slide10.png">
