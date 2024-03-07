@@ -99,7 +99,7 @@ const CurrentDateTime = () => {
     <Container>
       <StyledCurrentDateTime>{date}</StyledCurrentDateTime>
       <AniImg
-        src={process.env.PUBLIC_URL + `/assets/ani_effect.png`}
+        src={process.env.PUBLIC_URL + `/assets/tic.png`}
         alt={'Rotating'}
       />
     </Container>
