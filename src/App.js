@@ -40,10 +40,10 @@ function App() {
         <HashRouter basename={process.env.PUBLIC_URL}>
           <GlobalStyles />
           <Routes>
-            <Route path='/#/' element={<Home />} />
-            <Route path='/#/main' element={<Main />} />
-            <Route path='/#/newDiary' element={<NewDiary />} />
-            <Route path='/#/editDiary/:diaryId' element={<EditDiary />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/main' element={<Main />} />
+            <Route path='/newDiary' element={<NewDiary />} />
+            <Route path='/editDiary/:diaryId' element={<EditDiary />} />
           </Routes>
         </HashRouter>
       </RecoilRoot>
