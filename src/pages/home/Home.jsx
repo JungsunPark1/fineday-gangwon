@@ -1,41 +1,67 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { Carousel, ConfigProvider } from 'antd';
 import FirstHomeContainer from './FirstHomeContainer';
 import SecondHomeContainer from './SecondHomeContainer';
 
 const Container = styled.div`
-  max-width: 100vw;
-  // 아래 두개가 필수적인 스크롤 이벤트 핵심 프로퍼티
-  max-height: 100vh;
-  overflow-y: auto;
-  //
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+`;
+
+const ContentsContainer = styled.div`
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  width: 94vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(100, 100, 100, 0.5);
+  border-right: 1px solid rgba(100, 100, 100, 0.5);
+`;
+
+const BackTopImg = styled.img`
+  position: absolute;
+  width: 650px;
+  top: 24px;
   right: 0;
-  bottom: 0;
-  overflow-x: hidden;
+  transform: translateX(15%);
+  @media screen and (max-width: 1200px) {
+    transform: translateX(35%);
+  }
+  @media screen and (max-width: 1023px) {
+    width: 490px;
+    transform: translateX(25%);
+  }
+  @media screen and (max-width: 768px) {
+    width: 330px;
+  }
+  @media screen and (max-width: 375px) {
+    width: 140px;
+  }
 `;
-
-const SliderContainer = styled.div`
-  position: fixed;
-  bottom: 4%;
+const BackBottomImg = styled.img`
+  position: absolute;
+  width: 650px;
+  bottom: 10px;
   left: 0;
-  width: 100%;
-  z-index: 99999;
-`;
+  transform: translateX(-15%);
 
-const CarouselSlider = styled.div`
-  height: 24px;
-  color: white;
-  line-height: 160px;
-  text-align: center;
-  /* background-color: rgba(193, 226, 63, 0.2); */
+  @media screen and (max-width: 1200px) {
+    transform: translateX(-35%);
+  }
+
+  @media screen and (max-width: 1023px) {
+    width: 490px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 330px;
+  }
+  @media screen and (max-width: 375px) {
+    width: 140px;
+  }
 `;
 
 const Home = () => {
@@ -71,26 +97,13 @@ const Home = () => {
   }, []);
 
   return (
-    <Container ref={containerRef}>
-      {!isScrolled ? <FirstHomeContainer /> : <SecondHomeContainer />}
-      <SliderContainer>
-        <ConfigProvider
-          theme={{
-            components: {
-              Carousel: {
-                dotActiveWidth: 85,
-                dotWidth: 60,
-                dotHeight: 4,
-              },
-            },
-          }}
-        >
-          <Carousel dotPosition='bottom' ref={carouselRef}>
-            <CarouselSlider></CarouselSlider>
-            <CarouselSlider></CarouselSlider>
-          </Carousel>
-        </ConfigProvider>
-      </SliderContainer>
+    <Container>
+      <BackTopImg src={process.env.PUBLIC_URL + `/assets/moon.png`} />
+      <BackBottomImg src={process.env.PUBLIC_URL + `/assets/star.png`} />
+      <ContentsContainer>
+        <FirstHomeContainer />
+        <SecondHomeContainer />
+      </ContentsContainer>
     </Container>
   );
 };

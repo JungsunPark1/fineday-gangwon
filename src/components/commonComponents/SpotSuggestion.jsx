@@ -29,7 +29,7 @@ const Container = styled.div`
     margin-top: -50px;
     padding-top: 50px;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -321,13 +321,13 @@ const SpotSuggestion = ({ pageType }) => {
           <AnimatedSpan style={{ animationDelay: '2.0s' }}>날</AnimatedSpan>
         </AnimatedText>
       </TextContainer>
-      {pageType === 'homepage' && (
+      {/* {pageType === 'homepage' && (
         <LinkContainer>
           <GuestLink onClick={() => navigate(`/main?tab=2`)}>
             기록하기
           </GuestLink>
         </LinkContainer>
-      )}
+      )} */}
     </Container>
   );
 };

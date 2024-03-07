@@ -5,13 +5,12 @@ import HomeText from './components/HomeText';
 
 const Container = styled.div`
   width: 100%;
-  min-height: 100.1vh;
+  min-height: 100vh;
   box-sizing: border-box;
-  padding-bottom: 40px;
-  /* position: relative; */
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 `;
 
 const TextBox = styled.div`
@@ -20,17 +19,17 @@ const TextBox = styled.div`
   font-style: normal;
   font-size: 90px;
   box-sizing: border-box;
-  width: 95vw;
-  max-width: 1200px;
+  width: 100%;
   height: 40vh;
   margin: 0 auto;
   padding: 0 40px;
-  border-radius: 45px;
+  border-radius: 30px;
   background-color: rgba(251, 246, 244, 1);
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  box-sizing: border-box;
 
   @media screen and (max-width: 768px) {
     height: 35vh;
@@ -55,7 +54,7 @@ const FlexLine = styled.div`
 `;
 
 const MainText = styled.p`
-font-size: 95%;
+  font-size: 95%;
   font-weight: 900;
 
   @media screen and (max-width: 1023px) {
@@ -101,8 +100,7 @@ const BottomContainer = styled.div`
   font-style: normal;
   /* background-color: yellow; */
   box-sizing: border-box;
-  width: 95vw;
-  max-width: 1200px;
+  width: 100%;
   height: 45vh;
   margin: 0 auto;
   display: flex;
@@ -116,7 +114,6 @@ const BottomContainer = styled.div`
     justify-content: space-around;
   }
   @media screen and (max-width: 375px) {
- 
   }
 `;
 
@@ -125,7 +122,7 @@ const SecondHomeContainer = () => {
     <Container>
       <TextBox>
         <MainText>Recommend the clearest area in Gangwon-do</MainText>
-        <FlexLine/>
+        <FlexLine />
         <SubText>
           Five fine dust trends can be found in Goseong, Pyeongchang, Gangneung,
           Sokcho, and Yangyang over the past week.

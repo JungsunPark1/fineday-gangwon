@@ -14,7 +14,7 @@ const Container = styled.div`
   font-style: normal;
   font-size: 24px;
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
