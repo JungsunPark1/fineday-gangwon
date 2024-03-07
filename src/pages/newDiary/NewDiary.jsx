@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import DiaryEditor from '../main/components/mainContainer/DiaryEditor';
-import Header from '../../components/commonComponents/Header';
-import Footer from '../../components/commonComponents/Footer';
 
 const Container = styled.div`
   max-width: 100%;

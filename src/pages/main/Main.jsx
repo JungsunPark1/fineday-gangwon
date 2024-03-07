@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import MainView from './components/MainView';
 import Header from '../../components/commonComponents/Header';
@@ -15,15 +14,12 @@ const ContentsContainer = styled.div`
   width: 94vw;
   max-width: 1200px;
   margin: 0 auto;
-
 `;
 
 const Main = () => {
   return (
     <Container>
-     
-        <Header pageType='mainpage' />
-
+      <Header pageType='mainpage' />
       <ContentsContainer>
         <MainView />
       </ContentsContainer>

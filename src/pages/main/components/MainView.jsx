@@ -2,25 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import queryString from 'query-string';
 import styled from 'styled-components';
-import { Select, Tabs} from 'antd';
-
+import { Select, Tabs } from 'antd';
 import { useRecoilValue } from 'recoil';
 import { currentSpotAtom } from '../../../lib/recoil/atom/currentSpot';
-
 import MainChart from './mainContainer/MainChart';
 import DiaryList from './mainContainer/DiaryList';
 
 const Container = styled.div`
-  /* background-color: darkgray; */
   width: 100%;
-  /* margin: 0 auto; */
   padding-top: 80px;
   padding-bottom: 24px;
   box-sizing: border-box;
 `;
 
 const ContentsContainer = styled.div`
-  /* background-color: yellow; */
   width: 100%;
   height: auto; /* 높이를 auto로 설정하여 내용에 맞게 조정 */
 `;
@@ -31,7 +26,7 @@ const SelectorContainer = styled.div`
   gap: 12px;
 
   @media screen and (max-width: 768px) {
-   justify-content: space-between;
+    justify-content: space-between;
   }
 `;
 

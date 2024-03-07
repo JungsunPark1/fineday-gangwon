@@ -19,9 +19,7 @@ import {
   filterLocationInfo,
   calcAverageDust,
 } from '../../../lib/utils/apiLocationData';
-import {
-  convertLocationName
-} from '../../../lib/utils/apiLocationData';
+import { convertLocationName } from '../../../lib/utils/apiLocationData';
 
 const Container = styled.div`
   background-color: rgba(251, 246, 244, 1);

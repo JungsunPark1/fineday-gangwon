@@ -14,6 +14,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  position: fixed; /* 추가 */
+  top: 0; /* 추가 */
+  left: 0; /* 추가 */
+  right: 0; /* 추가 */
+  bottom: 0; /* 추가 */
 `;
 
 const SliderContainer = styled.div`
