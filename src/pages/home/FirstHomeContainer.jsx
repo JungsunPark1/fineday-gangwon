@@ -8,7 +8,7 @@ import CurrentSpotWeather from './components/CurrentSpotWeather';
 const Container = styled.div`
   width: 100%;
   color: #fff;
-  position: relative;
+  /* position: relative; */
 `;
 
 const ContentsContainer = styled.div`

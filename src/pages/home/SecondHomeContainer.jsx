@@ -8,7 +8,7 @@ const Container = styled.div`
   min-height: 100.1vh;
   box-sizing: border-box;
   padding-bottom: 40px;
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;
