@@ -8,11 +8,12 @@ import CurrentSpotWeather from './components/CurrentSpotWeather';
 const Container = styled.div`
   width: 100%;
   color: #fff;
-  /* position: relative; */
+  /* position: fixed; */
 `;
 
 const ContentsContainer = styled.div`
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   width: 94vw;
   max-width: 1200px;
   min-height: 100.1vh;

@@ -11,6 +11,7 @@ const Container = styled.div`
 
 const ContentsContainer = styled.div`
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   width: 94vw;
   max-width: 700px;
   min-height: 100vh;
