@@ -156,9 +156,9 @@ const MainChart = ({ selectedRegion }) => {
         margin={{ top: 50, right: 110, bottom: 90, left: 60 }}
         xScale={{ type: 'point' }}
         yScale={{
-          type: 'symlog',
+          type: 'linear',
           min: '0',
-          max: '200',
+          max: 'auto',
           stacked: false,
           reverse: false,
         }}
