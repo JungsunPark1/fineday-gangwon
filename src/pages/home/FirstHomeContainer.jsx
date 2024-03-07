@@ -69,8 +69,8 @@ const FirstHomeContainer = () => {
   return (
     <Container>
       <Header pageType='homepage' />
-      <BackTopImg src={process.env.PUBLIC_URL + `/assets/moon.png`} />
-      <BackBottomImg src={process.env.PUBLIC_URL + `/assets/star.png`} />
+      {/* <BackTopImg src={process.env.PUBLIC_URL + `/assets/moon.png`} />
+      <BackBottomImg src={process.env.PUBLIC_URL + `/assets/star.png`} /> */}
       <ContentsContainer>
         <SpotSuggestion pageType='homepage' />
         <CurrentDateTime />
