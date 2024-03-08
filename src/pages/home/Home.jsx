@@ -4,11 +4,12 @@ import FirstHomeContainer from './FirstHomeContainer';
 import SecondHomeContainer from './SecondHomeContainer';
 
 const Container = styled.div`
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 `;
 
 const ContentsContainer = styled.div`
@@ -23,45 +24,17 @@ const ContentsContainer = styled.div`
 
 const BackTopImg = styled.img`
   position: absolute;
-  width: 650px;
-  top: 24px;
+  width: 30vw;
+  top: 5%;
   right: 0;
-  transform: translateX(15%);
-  @media screen and (max-width: 1200px) {
-    transform: translateX(35%);
-  }
-  @media screen and (max-width: 1023px) {
-    width: 490px;
-    transform: translateX(25%);
-  }
-  @media screen and (max-width: 768px) {
-    width: 330px;
-  }
-  @media screen and (max-width: 375px) {
-    width: 140px;
-  }
+  transform: translateX(-15%);
 `;
 const BackBottomImg = styled.img`
   position: absolute;
-  width: 650px;
-  bottom: 10px;
+  width: 30vw;
+  bottom: 5%;
   left: 0;
-  transform: translateX(-15%);
-
-  @media screen and (max-width: 1200px) {
-    transform: translateX(-35%);
-  }
-
-  @media screen and (max-width: 1023px) {
-    width: 490px;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 330px;
-  }
-  @media screen and (max-width: 375px) {
-    width: 140px;
-  }
+  transform: translateX(15%);
 `;
 
 const Home = () => {
