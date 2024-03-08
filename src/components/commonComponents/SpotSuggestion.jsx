@@ -321,13 +321,13 @@ const SpotSuggestion = ({ pageType }) => {
           <AnimatedSpan style={{ animationDelay: '2.0s' }}>날</AnimatedSpan>
         </AnimatedText>
       </TextContainer>
-      {/* {pageType === 'homepage' && (
+      {pageType === 'homepage' && (
         <LinkContainer>
           <GuestLink onClick={() => navigate(`/main?tab=2`)}>
             기록하기
           </GuestLink>
         </LinkContainer>
-      )} */}
+      )}
     </Container>
   );
 };
