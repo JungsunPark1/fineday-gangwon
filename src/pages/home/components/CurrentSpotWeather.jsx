@@ -60,39 +60,10 @@ const WeatherTextBox = styled.div`
 `;
 const WeatherText = styled.p``;
 
-// const WeatherMessage = styled.p`
-//   font-size: 100%;
-//   @media (max-width: 768px) {
-//     font-size: 85%;
-//   }
-//   @media screen and (max-width: 375px) {
-//     padding-top: 24px;
-//     font-size: 80%;
-//   }
-// `;
-
 const CurrentSpotWeather = () => {
   const currentSpotInfo = useRecoilValue(currentSpotAtom);
   const [locationName, dustLevel] = currentSpotInfo;
   const coordinates = coordinateInfo[locationName]; // 지역 이름에 해당하는 좌표
-
-  // let message;
-  // const text = [
-  //   '몹시 맑고 깨끗한 날이에요 ✨',
-  //   '야외 활동하기 무리가 없는 날입니다 🚴‍♀️',
-  //   '실내위주의 여행은 어떠세요? 🫧',
-  //   '맑은 날이 오기를 함께 기다려 보실까요? 🌈',
-  // ];
-
-  // if (dustLevel < 30) {
-  //   message = text[0];
-  // } else if (dustLevel > 30 && dustLevel < 80) {
-  //   message = text[1];
-  // } else if (dustLevel > 80 && dustLevel < 150) {
-  //   message = text[2];
-  // } else {
-  //   message = text[3];
-  // }
 
   //지역 날씨 api 데이터 가져오기
   const {
@@ -117,9 +88,9 @@ const CurrentSpotWeather = () => {
   if (isLoading) return <div>잠시만 기다려주세요!</div>;
   if (isError) return <div>잠시 후 다시 시도해주세요!</div>;
 
-  // 기온과 강수량확률 정보만 추출
+  // 기온TMP, 강수확률POP, 강수량PCP
   let temperature = '데이터 없음';
-  let rain = '데이터 없음';
+  let rainProbability = '데이터 없음';
 
   if (weatherData) {
     const tempData = weatherData
@@ -127,10 +98,10 @@ const CurrentSpotWeather = () => {
       .map(data => data.fcstValue)[0]; // 첫 번째 TMP 데이터를 사용
     temperature = tempData ?? temperature;
 
-    const rainData = weatherData
+    const rainProbabilityData = weatherData
       .filter(weather => weather.category === 'POP')
       .map(data => data.fcstValue)[0]; // 첫 번째 카테고리 'POP' 데이터를 사용
-    rain = rainData ?? rain;
+    rainProbability = rainProbabilityData ?? rainProbability;
   }
 
   const addPostposition = {
@@ -144,31 +115,14 @@ const CurrentSpotWeather = () => {
   const quoteName = addPostposition[locationName] || `${locationName}은`;
 
   return (
-    // <Container>
-    //   <TextContainer>
-    //     {isLoading && <WeatherMessage>잠시만 기다려주세요!</WeatherMessage>}
-    //     {isError && <WeatherMessage>잠시 후 다시 시도해주세요!</WeatherMessage>}
-    //     {!isLoading && !isError && (
-    //       <>
-    //         <WeatherTextBox>
-    //           <WeatherText>지금 {quoteName}</WeatherText>
-    //           <WeatherText>미세먼지 수치 {dustLevel}㎍/m³ | </WeatherText>
-    //           <WeatherText>온도 {temperature}℃ | </WeatherText>
-    //           <WeatherText>강수확률 {rain}%</WeatherText>
-    //         </WeatherTextBox>
-    //         <WeatherMessage>" {message} "</WeatherMessage>
-    //       </>
-    //     )}
-    //   </TextContainer>
-    // </Container>
-
     <Container>
       <TextContainer>
         <CurrentLocation>지금 {quoteName}.</CurrentLocation>
         <WeatherTextBox>
           <WeatherText>미세먼지 수치 {dustLevel}㎍/m³</WeatherText>
           <WeatherText>온도 {temperature}℃</WeatherText>
-          <WeatherText>강수확률 {rain}%</WeatherText>
+          <WeatherText>강수확률 {rainProbability}%</WeatherText>
+          {/* <WeatherText>강수량 {rainfall}</WeatherText> */}
         </WeatherTextBox>
       </TextContainer>
     </Container>
