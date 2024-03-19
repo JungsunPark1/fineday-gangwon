@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { getHangeulDate } from '../../../lib/utils/string_date';
+import { getStringFullDate } from '../../../lib/utils/string_date';
 
 const Container = styled.div`
+  /* background-color: green; */
+  color: white;
   width: 100%;
   padding-top: 50px;
   position: absolute;
@@ -28,12 +30,9 @@ const Container = styled.div`
 `;
 
 const StyledCurrentDateTime = styled.p`
-  /* font-family: 'Song Myung', serif;
-  font-weight: bold;
-  font-style: normal; */
-  font-family: 'Sunflower', sans-serif;
-  font-weight: 400;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-style: normal;
+  font-weight: 300;
   font-size: 24px;
 
   @media screen and (max-width: 1023px) {
@@ -76,11 +75,11 @@ const AniImg = styled.img`
 `;
 
 const CurrentDateTime = () => {
-  const [date, setDate] = useState(getHangeulDate(new Date()));
+  const [date, setDate] = useState(getStringFullDate(new Date()));
 
   useEffect(() => {
     const updateDate = () => {
-      setDate(getHangeulDate(new Date()));
+      setDate(getStringFullDate(new Date()));
 
       //1. 현재 시간을 계산해서
       const now = new Date();
@@ -99,7 +98,7 @@ const CurrentDateTime = () => {
     <Container>
       <StyledCurrentDateTime>{date}</StyledCurrentDateTime>
       <AniImg
-        src={process.env.PUBLIC_URL + `/assets/tic.png`}
+        src={process.env.PUBLIC_URL + `/assets/tic1.png`}
         alt={'Rotating'}
       />
     </Container>

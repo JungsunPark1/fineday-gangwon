@@ -11,8 +11,8 @@ const Container = styled.div`
 `;
 
 const ContentsContainer = styled.div`
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); */
   width: 94vw;
   max-width: 1200px;
   min-height: 100vh;

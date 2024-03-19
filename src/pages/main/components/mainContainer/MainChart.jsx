@@ -5,7 +5,7 @@ import { convertLocationName } from '../../../../lib/utils/apiLocationData';
 import { getStringDate } from '../../../../lib/utils/string_date';
 
 const Container = styled.div`
-  height: 50vh; // 높이를 뷰포트의 50%로 설정
+  height: 60vh; // 높이를 뷰포트의 50%로 설정
   width: 100%; // 너비를 전체로 설정
 `;
 
@@ -59,17 +59,18 @@ const regionColors = {
 const customTheme = {
   legends: {
     text: {
-      fontFamily: 'Song Myung,serif ',
+      fontFamily: 'IBM Plex Sans KR,sans-serif ',
       fontSize: 14,
       fontWeight: 'bold',
       fill: '#ffffff',
     },
   },
+
   axis: {
     ticks: {
       text: {
         // 축 눈금 텍스트 스타일 설정
-        fontFamily: 'Song Myung,serif ',
+        fontFamily: 'IBM Plex Sans KR,sans-serif ',
         fontSize: 12,
         fill: '#999999',
       },

@@ -33,8 +33,9 @@ const SelectorContainer = styled.div`
 //셀렉터 커스텀
 const CustomSelect = styled(Select)`
   .ant-select-selector.ant-select-selector {
-    font-family: 'Sunflower';
+    font-family: 'IBM Plex Sans KR', sans-serif;
     font-style: normal;
+    font-weight: 300;
     font-size: 16px;
 
     @media screen and (max-width: 768px) {
@@ -50,8 +51,9 @@ const CreateDiaryBtn = styled.button`
   background-color: white;
   width: 135px;
   height: 31px;
-  font-family: 'Sunflower';
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-style: normal;
+  font-weight: 300;
   font-size: 16px;
   border: 1px solid #d9d9d9;
   box-sizing: border-box;
@@ -82,9 +84,9 @@ const CustomTabs = styled(Tabs)`
   }
 
   .ant-tabs-tab {
-    font-family: 'Sunflower';
-    font-weight: '300';
+    font-family: 'IBM Plex Sans KR', sans-serif;
     font-style: normal;
+    font-weight: 300;
     font-size: 16px;
     padding: 6px 18px !important;
     border-bottom: none !important;
@@ -150,14 +152,6 @@ const MainView = () => {
   const filterOption = (input, option) =>
     (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
 
-  // 데이터피커
-  // const { RangePicker } = DatePicker;
-
-  //텝 메뉴
-  // const [size, setSize] = useState('large');
-  // const onChange = e => {
-  //   setSize(e.target.value);
-  // };
   return (
     <Container>
       <ContentsContainer>
@@ -206,51 +200,11 @@ const MainView = () => {
                 navigate(`/newDiary`);
               }}
             >
-              기록하기 ↗️
+              기록하기
             </CreateDiaryBtn>
           )}
         </SelectorContainer>
         {/* <TabContentsContainer> */}
-
-        {/* <ConfigProvider
-          theme={{
-            components: {
-              Tabs: {
-                cardBg: 'transparant',
-                colorBgContainer: 'transparant',
-                cardPadding: '6px 18px',
-                itemColor: 'white',
-                inkBarColor: '#1e87f0',
-                itemSelectedColor: '#1e87f0',
-                fontFamily: 'Sunflower',
-                titleFontSize: '16px',
-              },
-            },
-          }}
-        >
-          <Tabs
-            activeKey={activeKey}
-            onChange={onTabChange}
-            type='card'
-            //텝 사이 간격
-            tabBarGutter={14}
-            // 모바일시에는  size 줄이는것 넣어줘야함.
-            size={'middle'}
-            items={[
-              {
-                label: '차트',
-                key: '1',
-                // MainChart에 selectedRegion prop으로 selectedRegionValue 전달
-                children: <MainChart selectedRegion={selectedRegionValue} />,
-              },
-              {
-                label: '기록',
-                key: '2',
-                children: <DiaryList selectedRegion={selectedRegionValue} />,
-              },
-            ]}
-          />
-        </ConfigProvider> */}
 
         <CustomTabs
           activeKey={activeKey}

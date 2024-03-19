@@ -22,7 +22,7 @@ import {
 import { convertLocationName } from '../../../lib/utils/apiLocationData';
 
 const Container = styled.div`
-  background-color: rgba(251, 246, 244, 1);
+  background-color: rgba(65, 62, 88, 0.5);
   width: 48%;
   max-width: 750px;
   height: 100%;
@@ -43,7 +43,6 @@ const Container = styled.div`
 `;
 
 const ChartContainer = styled.div`
-  /* background-color: orange; */
   box-sizing: border-box;
   height: 75%;
   /*flex-grow, flex-shrink, flex-basis 설정 */
@@ -56,8 +55,7 @@ const ChartContainer = styled.div`
 `;
 
 const TextBox = styled.div`
-  /* background-color: beige; */
-  /* text-align: center; */
+  /* text-shadow: 2px 2px 4px #000000; */
   font-size: 16px;
   line-height: 1.5em;
   /*flex-grow, flex-shrink, flex-basis 설정 */
@@ -85,7 +83,6 @@ const TextBox = styled.div`
 
 const BestSpot = styled.p``;
 
-const Message = styled.p``;
 
 const SpotSuggestionChart = () => {
   const locationAtoms = {
@@ -288,31 +285,6 @@ const SpotSuggestionChart = () => {
   // console.log(homeChartData);
 
   const firstRegion = homeChartData[0].region;
-  // console.log(firstRegion);
-
-  // //차트에 넣어주기 위한 지역 이름
-  // const firstRegion = averagesInfo[0][0];
-  // const secondRegion = averagesInfo[1][0];
-  // const thirdRegion = averagesInfo[2][0];
-
-  // const homeChartData = [
-  //   {
-  //     region: convertLocationName[firstRegion],
-  //     numberOne: averagesInfo[0][1],
-  //     numberOneColor: 'hsl(220.0829875518672, 100%, 47.25490196078431%)',
-  //   },
-  //   {
-  //     region: convertLocationName[secondRegion],
-  //     numberTwo: averagesInfo[1][1],
-  //     numberTwoColor: 'hsl(319, 70%, 50%)',
-  //   },
-
-  //   {
-  //     region: convertLocationName[thirdRegion],
-  //     numberThree: averagesInfo[2][1],
-  //     numberThreeColor: 'hsl(195, 70%, 50%)',
-  //   },
-  // ];
 
   // 서울 월별 미세먼지 평균
   const averageSeoul = [
@@ -345,7 +317,7 @@ const SpotSuggestionChart = () => {
           data={homeChartData}
           keys={['value']}
           indexBy='region'
-          colors={['#f1ff59', '#31c04f', '#00bea6', '#009ccf', '#2048b9']}
+          colors={['#ebdf04', '#31c04f', '#00bea6', '#009ccf', '#2048b9']}
           colorBy='index'
           margin={{ top: 0, right: 20, bottom: 50, left: 20 }}
           minValue={0}
@@ -381,15 +353,15 @@ const SpotSuggestionChart = () => {
           }}
           labelSkipWidth={0}
           labelSkipHeight={0}
-          labelTextColor='#000000'
+          labelTextColor='#ffffff'
           theme={{
             //x축 라벨 폰트(지역)
             axis: {
               ticks: {
                 text: {
                   fontSize: '12px',
-                  fill: '#646464',
-                  fontFamily: 'Sunflower',
+                  fill: '#ffffff',
+                  fontFamily: 'IBM Plex Sans KR, sans-serif',
                   fontOpticalSizing: 'auto',
                   fontStyle: 'normal',
                   fontWeight: '400',
@@ -400,37 +372,13 @@ const SpotSuggestionChart = () => {
             labels: {
               text: {
                 fontSize: '14px',
-                fontFamily: 'Montserrat, sans-serif',
+                fontFamily: 'IBM Plex Sans KR, sans-serif',
                 fontOpticalSizing: 'auto',
                 fontStyle: 'normal',
                 fontWeight: '600',
               },
             },
           }}
-          // legends={[
-          //   {
-          //     dataFrom: 'keys',
-          //     anchor: 'bottom-right',
-          //     direction: 'column',
-          //     justify: false,
-          //     translateX: 120,
-          //     translateY: 0,
-          //     itemsSpacing: 2,
-          //     itemWidth: 100,
-          //     itemHeight: 20,
-          //     itemDirection: 'left-to-right',
-          //     itemOpacity: 0.85,
-          //     symbolSize: 12,
-          //     effects: [
-          //       {
-          //         on: 'hover',
-          //         style: {
-          //           itemOpacity: 1,
-          //         },
-          //       },
-          //     ],
-          //   },
-          // ]}
           gridXValues={[]} // x축 배경 라인 제거
           gridYValues={[]} // y축 배경 라인 제거
           isInteractive={false} //툴팁 비활성화
@@ -445,16 +393,19 @@ const SpotSuggestionChart = () => {
             {
               axis: 'y',
               value: currentSeoulValue, // Y축에서 마커를 표시할 값
-              lineStyle: { stroke: 'red', strokeWidth: 2 }, // 마커 스타일 설정
-              legend: `${currentMonth}월 서울 평균 : ${currentSeoulValue}`, // 선택적: 마커 범례
+              textStyle: {
+                fill: '#ffffff',
+              },
+              lineStyle: { stroke: '#a55757', strokeWidth: 2 }, // 마커 스타일 설정
+              legend: `${currentMonth}월 서울 평균 : ${currentSeoulValue} ㎍/m³`, // 선택적: 마커 범례
               legendOrientation: 'horizontal', // 범례 방향
             },
           ]}
         />
       </ChartContainer>
       <TextBox>
-        <BestSpot>지난주 가장 맑았던 곳은 👉 {firstRegion}</BestSpot>
-        <Message>강원도는 서울보다 맑아요</Message>
+        <BestSpot>지난주 가장 맑았던 곳은 '{firstRegion}'</BestSpot>
+        {/* <Message>강원도는 서울보다 맑아요</Message> */}
       </TextBox>
     </Container>
   );

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background-color: rgba(251, 246, 244, 1);
+  background-color: rgba(65, 62, 88, 0.5);
   width: 48%;
   max-width: 750px;
   box-sizing: border-box;
@@ -11,6 +11,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  /* text-shadow: 2px 2px 4px #000000; */
 
   @media screen and (max-width: 768px) {
     width: 38%;
@@ -25,10 +26,11 @@ const TextContainer = styled.div`
   /* background-color: green; */
   font-size: 20px;
   box-sizing: border-box;
+  margin: 0 20px;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 28px;
   @media screen and (max-width: 1023px) {
     font-size: 17px;
@@ -71,6 +73,7 @@ const LinkContainer = styled.div`
   /* background-color: blue; */
   text-align: center;
   font-size: 22px;
+  font-weight: 300;
 
   @media screen and (max-width: 1023px) {
     font-size: 22px;
@@ -95,23 +98,25 @@ const GuestLink = styled.a`
   &::after {
     content: '';
     position: absolute;
-    background: black;
+    background: #fff;
     opacity: 0.5;
-    height: 1px;
+    height: 2px;
     bottom: -6px;
+    color: #ffffff;
     width: 100%;
     left: 0;
     transition: all 0.3s ease;
+    /* box-shadow: 2px 2px 4px #000000; */
   }
 
   &:hover::after {
     width: 50%;
     /* 밑줄이 중앙으로 모이게 */
     left: 25%;
-    background: #1e87f0;
+    background: #ffffff;
   }
   &:hover {
-    color: #1e87f0;
+    font-weight: bold;
   }
 `;
 
@@ -128,7 +133,7 @@ const HomeText = () => {
 
       <LinkContainer>
         <GuestLink onClick={() => navigate(`/main?tab=1`)}>
-          추세 확인하기 ↗️
+          차트 확인하기
         </GuestLink>
       </LinkContainer>
     </Container>

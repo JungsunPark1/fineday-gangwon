@@ -15,8 +15,9 @@ import { getStringFullDate } from '../../../../lib/utils/string_date';
 const Container = styled.div`
   box-sizing: border-box;
   color: white;
-  font-family: 'Sunflower', sans-serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-style: normal;
+  font-weight: 300;
   width: 100%;
   padding-top: 75px;
   padding-bottom: 45px;
@@ -118,7 +119,6 @@ const BackBtn = styled.button`
   transition: font-size 0.3s ease;
 
   &:hover {
-    box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
     outline: 0;
     color: #1677ff;
     font-size: 105%;
@@ -165,8 +165,9 @@ const DiaryHeaderTitle = styled.p`
 
 const CustomSelect = styled(Select)`
   .ant-select-selector.ant-select-selector {
-    font-family: 'Sunflower';
+    font-family: 'IBM Plex Sans KR', sans-serif;
     font-style: normal;
+    font-weight: 300;
   }
 `;
 
@@ -296,7 +297,12 @@ const DiaryEditor = ({ isEdit, originData }) => {
 
     // localStorage.setItem('diaries', JSON.stringify(diaries));
     saveToLocalStorage(diaries);
-    navigate('/main?tab=2', { replace: true });
+    console.log('전달될 필터: ', location.value);
+
+    navigate('/main?tab=2', {
+      replace: true,
+      state: { selectedLocation: location.value },
+    });
   };
 
   //삭제
@@ -307,7 +313,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
         diary => diary.id !== originData.id
       );
       saveToLocalStorage(filteredDiaries);
-      navigate('/man', { replace: true });
+      navigate('/main', { replace: true });
     }
   };
 
@@ -357,7 +363,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
           onChange={onHandleChange}
           filterOption={filterOption}
           style={{
-            width: 165,
+            width: 185,
             height: 31,
           }}
           options={[

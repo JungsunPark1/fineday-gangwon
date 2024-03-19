@@ -5,7 +5,7 @@ import SpotSuggestion from './SpotSuggestion';
 
 const HeaderContainer = styled.div`
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 999999;
 
   ${({ $pageType }) =>
