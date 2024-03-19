@@ -42,10 +42,10 @@ const TextContainer = styled.div`
   }
   @media screen and (max-width: 768px) {
     gap: 8px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   @media screen and (max-width: 550px) {
-    margin-top: 8px;
+    /* margin-top: 8px; */
   }
 `;
 
@@ -64,7 +64,6 @@ const Message = styled.p`
   @media screen and (max-width: 375px) {
     font-size: 12px;
     line-height: 1em;
-
     margin-top: 0;
   }
 `;
@@ -82,8 +81,8 @@ const LinkContainer = styled.div`
     font-size: 19px;
   }
   @media screen and (max-width: 550px) {
-    margin-top: 16px;
     font-size: 18px;
+    /* margin-top: 16px; */
     margin-bottom: 16px;
   }
   @media screen and (max-width: 375px) {
