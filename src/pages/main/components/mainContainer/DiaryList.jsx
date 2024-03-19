@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Table, ConfigProvider } from 'antd';
 import { getStringFullDate } from '../../../../lib/utils/string_date';
-
-// const Container = styled.div`
-//   overflow-y: auto;
-// `;
 
 // 일기 테이블 커스텀
 const CustomTable = styled(Table)`
@@ -43,7 +39,7 @@ const CustomTable = styled(Table)`
 
   // 테이블 폰트
   .ant-table-content {
-    font-family: 'Sunflower', sans-serif;
+    font-family: 'Song Myung', serif;
     font-size: 14px;
     font-weight: 100;
     color: #e9e9e9;
@@ -72,7 +68,8 @@ const CustomTable = styled(Table)`
     }
   }
 
-  .ant-table-cell {
+  .ant-table-tbody > tr.ant-table-placeholder:hover > td {
+    background-color: #242424;
   }
 
   // 확장 아이콘 색상
@@ -102,6 +99,9 @@ const DiaryList = ({ selectedRegion }) => {
   const [expandedRowKeys, setExpandedRowKeys] = useState([]);
   const [diaryData, setDiaryData] = useState([]);
   const [filteredDiaryData, setFilteredDiaryData] = useState([]);
+  // 다이어리 수정, 작성 완료후 기록된 필터리스트로 올수 있도록
+  const location = useLocation();
+  const [currentFilter, setCurrentFilter] = useState('default');
 
   const navigate = useNavigate();
 
@@ -124,19 +124,25 @@ const DiaryList = ({ selectedRegion }) => {
     // localStorage에서 diaries 데이터를 가져오기
     const loadedDiariesData = JSON.parse(localStorage.getItem('diaries')) || [];
     setDiaryData(loadedDiariesData);
+
     // selectedRegion이 변경될 때마다 filteredDiaryData 업데이트
     const newFilteredDiaryData = filterDiariesData(
       loadedDiariesData,
       selectedRegion
     );
     setFilteredDiaryData(newFilteredDiaryData);
-  }, [selectedRegion]);
 
-  // 지역이 변경될 때마다 확장된 행을 초기화
-  useEffect(() => {
+    // 지역이 변경될 때마다 확장된 행을 초기화
     setExpandedRowKeys([]);
-    // selectedRegion 변경 시 useEffect 다시 실행
-  }, [selectedRegion]);
+  }, [selectedRegion]); // selectedRegion 변경 시 useEffect 다시 실행
+
+  // 다이어리 작성 완료 후 페이지가 마운트될 때 전달받은 상태로 필터를 업데이트
+  useEffect(() => {
+    if (location.state?.selectedLocation) {
+      setCurrentFilter(location.state.selectedLocation);
+      console.log('받은 상태: ', location.state);
+    }
+  }, [location]);
 
   // 삭제 로직
   const handleDelete = diaryId => {
@@ -209,8 +215,6 @@ const DiaryList = ({ selectedRegion }) => {
   const onChange = (filters, sorter, extra) => {
     console.log('params', filters, sorter, extra);
   };
-
-  // const onEdit = () => {};
 
   return (
     <ConfigProvider

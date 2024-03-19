@@ -5,7 +5,7 @@ import { convertLocationName } from '../../../../lib/utils/apiLocationData';
 import { getStringDate } from '../../../../lib/utils/string_date';
 
 const Container = styled.div`
-  height: 50vh; // 높이를 뷰포트의 50%로 설정
+  height: 60vh; // 높이를 뷰포트의 50%로 설정
   width: 100%; // 너비를 전체로 설정
 `;
 

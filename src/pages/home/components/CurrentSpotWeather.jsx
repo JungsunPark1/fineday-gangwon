@@ -9,8 +9,8 @@ import { specialDate, specialTime } from '../../../lib/utils/date';
 
 const Container = styled.div`
   width: 100%;
-  font-family: 'Sunflower', sans-serif;
-  font-weight: 100;
+  color: #ffffff;
+  font-family: 'Song Myung', serif;
   font-style: normal;
   font-size: 24px;
   position: absolute;
@@ -18,6 +18,7 @@ const Container = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
+  text-shadow: 2px 2px 4px #000000;
 `;
 
 const TextContainer = styled.div`

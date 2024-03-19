@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { useQuery } from 'react-query';
 import { useSetRecoilState, useRecoilValue } from 'recoil';
@@ -20,12 +20,13 @@ import {
 const Container = styled.div`
   width: 100%;
   color: #ffffff;
+  font-family: 'Song Myung', serif;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
 
   ${({ $pageType }) =>
     $pageType === 'homepage' &&
     `
-    font-family: 'Sunflower', sans-serif;
-    font-style: normal;
     margin-top: -50px;
     padding-top: 50px;
     position: absolute;
@@ -49,8 +50,6 @@ const Container = styled.div`
   ${({ $pageType }) =>
     $pageType === 'mainpage' &&
     `
-    font-family: 'Song Myung', serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     display:flex;
@@ -76,11 +75,11 @@ const TextContainer = styled.div`
     `
     max-width: 95vw;
     margin: 0 auto;
-    font-size: 120px;
+    font-size: 100px;
     letter-spacing: 0;
 
     @media screen and (max-width: 1023px) {
-    font-size: 12vw;
+    font-size: 10vw;
   }
     `}
 
@@ -121,7 +120,6 @@ const SuggestionQuote = styled.h2`
     $pageType === 'homepage' &&
     `
     margin-bottom: 0.2em;
-    font-weight: 700;
     `}
 
   ${({ $pageType }) =>
@@ -134,8 +132,7 @@ const AnimatedText = styled.div`
   ${({ $pageType }) =>
     $pageType === 'homepage' &&
     `
-    font-weight: 300;
-    font-size: 80%;
+    font-size: 60%;
     `}
 
   ${({ $pageType }) =>
@@ -183,21 +180,25 @@ const GuestLink = styled.a`
     position: absolute;
     background: #fff;
     opacity: 0.5;
-    height: 1px;
+    height: 2px;
     bottom: -6px;
     width: 100%;
     left: 0;
     transition: all 0.3s ease;
+    box-shadow: 2px 2px 4px #000000;
   }
 
   &:hover::after {
     width: 50%;
     /* 밑줄이 중앙으로 모이게 */
     left: 25%;
-    background: #1e87f0;
+    /* background: #1e87f0; */
+    background: #ffffff;
+
   }
   &:hover {
-    color: #1e87f0;
+    /* color: #1e87f0; */
+    font-weight: bold;
   }
 `;
 
@@ -212,58 +213,53 @@ const SpotSuggestion = ({ pageType }) => {
   const setSokchoCurrent = useSetRecoilState(sokchoCurrentAtom);
   const currentSpot = useRecoilValue(currentSpotAtom);
 
-
   //const { data, isError, isLoading, refetch } = useQuery(
-  const { refetch } = useQuery(
-    'dustData',
-    fetchDustData,
-    {
-      // onSuccess ->useQuery에서 사용함. 비동기 요청 성공시 실행되는 콜백함수 정의!
-      onSuccess: data => {
-        // 데이터 fetch 성공 시, Recoil Atom 업데이트
-        if (data && data.length > 0) {
-          let fiveSpot = filterGangwonDustData(data);
-          // console.log(fiveSpot);
-          // 데이터가 제대로 나지 않을 경우 강릉 데이터로 교체
-          const gangneungData = fiveSpot.find(([name]) => name === '주문진읍');
-          // 강릉 데이터가 없을 수 있으므로 없으면 0을
-          const gangneungValue = gangneungData ? gangneungData[1] : '0';
+  const { refetch } = useQuery('dustData', fetchDustData, {
+    // onSuccess ->useQuery에서 사용함. 비동기 요청 성공시 실행되는 콜백함수 정의!
+    onSuccess: data => {
+      // 데이터 fetch 성공 시, Recoil Atom 업데이트
+      if (data && data.length > 0) {
+        let fiveSpot = filterGangwonDustData(data);
+        // console.log(fiveSpot);
+        // 데이터가 제대로 나지 않을 경우 강릉 데이터로 교체
+        const gangneungData = fiveSpot.find(([name]) => name === '주문진읍');
+        // 강릉 데이터가 없을 수 있으므로 없으면 0을
+        const gangneungValue = gangneungData ? gangneungData[1] : '0';
 
-          // 데이터의 value가 숫자가 아닐 경우
-          fiveSpot.forEach(spot => {
-            const [name, value] = spot;
-            const replaceValue = isNaN(parseInt(value, 10))
-              ? parseInt(gangneungValue, 10)
-              : parseInt(value, 10);
+        // 데이터의 value가 숫자가 아닐 경우
+        fiveSpot.forEach(spot => {
+          const [name, value] = spot;
+          const replaceValue = isNaN(parseInt(value, 10))
+            ? parseInt(gangneungValue, 10)
+            : parseInt(value, 10);
 
-            // 각각의 recoil atom 업데이트
-            switch (name) {
-              case '고성(DMZ)':
-                setGoseongCurrent([name, replaceValue]);
-                break;
-              case '양양읍':
-                setYangyangCurrent([name, replaceValue]);
-                break;
-              case '평창읍':
-                setPyeongchangCurrent([name, replaceValue]);
-                break;
-              case '주문진읍':
-                setGangneungCurrent([name, replaceValue]);
-                break;
-              case '금호동':
-                setSokchoCurrent([name, replaceValue]);
-                break;
-              default:
-                break;
-            }
-          });
-          const bestSpot = findGoodSpot(fiveSpot);
-          setCurrentSpot(bestSpot);
-          // console.log(bestSpot);
-        }
-      },
-    }
-  );
+          // 각각의 recoil atom 업데이트
+          switch (name) {
+            case '고성(DMZ)':
+              setGoseongCurrent([name, replaceValue]);
+              break;
+            case '양양읍':
+              setYangyangCurrent([name, replaceValue]);
+              break;
+            case '평창읍':
+              setPyeongchangCurrent([name, replaceValue]);
+              break;
+            case '주문진읍':
+              setGangneungCurrent([name, replaceValue]);
+              break;
+            case '금호동':
+              setSokchoCurrent([name, replaceValue]);
+              break;
+            default:
+              break;
+          }
+        });
+        const bestSpot = findGoodSpot(fiveSpot);
+        setCurrentSpot(bestSpot);
+        // console.log(bestSpot);
+      }
+    },
+  });
 
   // 실시간이다 보니 너무 리프레쉬가 잦아서 30분 주기로 api요청, 보통 리액트 쿼리에서는 useEffect을 같이 사용하지 않는데..
   // 이 프로젝트의 경우 부득이 같이 사용.

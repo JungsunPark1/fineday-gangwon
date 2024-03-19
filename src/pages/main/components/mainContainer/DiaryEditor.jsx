@@ -15,7 +15,7 @@ import { getStringFullDate } from '../../../../lib/utils/string_date';
 const Container = styled.div`
   box-sizing: border-box;
   color: white;
-  font-family: 'Sunflower', sans-serif;
+  font-family: 'Song Myung', serif;
   font-style: normal;
   width: 100%;
   padding-top: 75px;
@@ -165,7 +165,7 @@ const DiaryHeaderTitle = styled.p`
 
 const CustomSelect = styled(Select)`
   .ant-select-selector.ant-select-selector {
-    font-family: 'Sunflower';
+    font-family: 'Song Myung', serif;
     font-style: normal;
   }
 `;
@@ -296,7 +296,12 @@ const DiaryEditor = ({ isEdit, originData }) => {
 
     // localStorage.setItem('diaries', JSON.stringify(diaries));
     saveToLocalStorage(diaries);
-    navigate('/main?tab=2', { replace: true });
+    console.log('전달될 필터: ', location.value);
+
+    navigate('/main?tab=2', {
+      replace: true,
+      state: { selectedLocation: location.value },
+    });
   };
 
   //삭제
@@ -307,7 +312,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
         diary => diary.id !== originData.id
       );
       saveToLocalStorage(filteredDiaries);
-      navigate('/man', { replace: true });
+      navigate('/main', { replace: true });
     }
   };
 
@@ -357,7 +362,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
           onChange={onHandleChange}
           filterOption={filterOption}
           style={{
-            width: 165,
+            width: 185,
             height: 31,
           }}
           options={[
