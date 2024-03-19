@@ -70,6 +70,12 @@ https://jsp0422.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8
 
 ## 구현 기능
 
+#### 프로젝트 구조
+
+ <br>
+  <img src="./introduce/slides/structure.png">
+  <br>
+
 #### 홈 페이지 1 기능
 
  <br>
