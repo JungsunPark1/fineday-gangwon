@@ -39,9 +39,11 @@ const CustomTable = styled(Table)`
 
   // 테이블 폰트
   .ant-table-content {
-    font-family: 'Song Myung', serif;
-    font-size: 14px;
-    font-weight: 100;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+
     color: #e9e9e9;
 
     @media screen and (max-width: 768px) {
@@ -61,10 +63,10 @@ const CustomTable = styled(Table)`
     }
   }
   .ant-table-tbody > tr > td {
-    padding: 4px 8px;
+    padding: 12px 8px;
 
     @media screen and (max-width: 460px) {
-      padding: 4px 2px;
+      padding: 8px 2px;
     }
   }
 
@@ -238,7 +240,7 @@ const DiaryList = ({ selectedRegion }) => {
 
             lineHeight: 1.2,
             // cell 상하 패딩
-            cellPaddingBlock: 12,
+            cellPaddingBlock: 14,
           },
         },
       }}

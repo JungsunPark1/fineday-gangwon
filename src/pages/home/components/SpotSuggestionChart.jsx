@@ -22,7 +22,7 @@ import {
 import { convertLocationName } from '../../../lib/utils/apiLocationData';
 
 const Container = styled.div`
-  background-color: rgba(17, 176, 238, 0.484);
+  background-color: rgba(65, 62, 88, 0.5);
   width: 48%;
   max-width: 750px;
   height: 100%;
@@ -56,7 +56,6 @@ const ChartContainer = styled.div`
 
 const TextBox = styled.div`
   /* text-shadow: 2px 2px 4px #000000; */
-  color: #000000;
   font-size: 16px;
   line-height: 1.5em;
   /*flex-grow, flex-shrink, flex-basis 설정 */
@@ -84,7 +83,6 @@ const TextBox = styled.div`
 
 const BestSpot = styled.p``;
 
-const Message = styled.p``;
 
 const SpotSuggestionChart = () => {
   const locationAtoms = {
@@ -319,7 +317,7 @@ const SpotSuggestionChart = () => {
           data={homeChartData}
           keys={['value']}
           indexBy='region'
-          colors={['#f1ff59', '#31c04f', '#00bea6', '#009ccf', '#2048b9']}
+          colors={['#ebdf04', '#31c04f', '#00bea6', '#009ccf', '#2048b9']}
           colorBy='index'
           margin={{ top: 0, right: 20, bottom: 50, left: 20 }}
           minValue={0}
@@ -355,15 +353,15 @@ const SpotSuggestionChart = () => {
           }}
           labelSkipWidth={0}
           labelSkipHeight={0}
-          labelTextColor='#3c3a3a'
+          labelTextColor='#ffffff'
           theme={{
             //x축 라벨 폰트(지역)
             axis: {
               ticks: {
                 text: {
                   fontSize: '12px',
-                  fill: '#3c3a3a',
-                  fontFamily: 'Song Myung',
+                  fill: '#ffffff',
+                  fontFamily: 'IBM Plex Sans KR, sans-serif',
                   fontOpticalSizing: 'auto',
                   fontStyle: 'normal',
                   fontWeight: '400',
@@ -374,7 +372,7 @@ const SpotSuggestionChart = () => {
             labels: {
               text: {
                 fontSize: '14px',
-                fontFamily: 'Montserrat, sans-serif',
+                fontFamily: 'IBM Plex Sans KR, sans-serif',
                 fontOpticalSizing: 'auto',
                 fontStyle: 'normal',
                 fontWeight: '600',
@@ -395,8 +393,11 @@ const SpotSuggestionChart = () => {
             {
               axis: 'y',
               value: currentSeoulValue, // Y축에서 마커를 표시할 값
-              lineStyle: { stroke: 'red', strokeWidth: 2 }, // 마커 스타일 설정
-              legend: `${currentMonth}월 서울 평균 : ${currentSeoulValue}`, // 선택적: 마커 범례
+              textStyle: {
+                fill: '#ffffff',
+              },
+              lineStyle: { stroke: '#a55757', strokeWidth: 2 }, // 마커 스타일 설정
+              legend: `${currentMonth}월 서울 평균 : ${currentSeoulValue} ㎍/m³`, // 선택적: 마커 범례
               legendOrientation: 'horizontal', // 범례 방향
             },
           ]}
@@ -404,7 +405,7 @@ const SpotSuggestionChart = () => {
       </ChartContainer>
       <TextBox>
         <BestSpot>지난주 가장 맑았던 곳은 '{firstRegion}'</BestSpot>
-        <Message>강원도는 서울보다 맑아요</Message>
+        {/* <Message>강원도는 서울보다 맑아요</Message> */}
       </TextBox>
     </Container>
   );

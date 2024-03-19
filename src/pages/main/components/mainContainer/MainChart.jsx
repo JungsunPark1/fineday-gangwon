@@ -59,17 +59,18 @@ const regionColors = {
 const customTheme = {
   legends: {
     text: {
-      fontFamily: 'Song Myung,serif ',
+      fontFamily: 'IBM Plex Sans KR,sans-serif ',
       fontSize: 14,
       fontWeight: 'bold',
       fill: '#ffffff',
     },
   },
+
   axis: {
     ticks: {
       text: {
         // 축 눈금 텍스트 스타일 설정
-        fontFamily: 'Song Myung,serif ',
+        fontFamily: 'IBM Plex Sans KR,sans-serif ',
         fontSize: 12,
         fill: '#999999',
       },

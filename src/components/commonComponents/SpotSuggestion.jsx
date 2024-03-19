@@ -20,9 +20,9 @@ import {
 const Container = styled.div`
   width: 100%;
   color: #ffffff;
-  font-family: 'Song Myung', serif;
+  font-family: "IBM Plex Sans KR", sans-serif;
   font-style: normal;
-  text-shadow: 2px 2px 4px #000000;
+  font-weight: 300;
 
   ${({ $pageType }) =>
     $pageType === 'homepage' &&
@@ -185,7 +185,7 @@ const GuestLink = styled.a`
     width: 100%;
     left: 0;
     transition: all 0.3s ease;
-    box-shadow: 2px 2px 4px #000000;
+    /* box-shadow: 2px 2px 4px #000000; */
   }
 
   &:hover::after {

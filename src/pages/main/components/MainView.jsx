@@ -33,8 +33,9 @@ const SelectorContainer = styled.div`
 //셀렉터 커스텀
 const CustomSelect = styled(Select)`
   .ant-select-selector.ant-select-selector {
-    font-family: 'Song Myung', serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
     font-style: normal;
+    font-weight: 300;
     font-size: 16px;
 
     @media screen and (max-width: 768px) {
@@ -50,8 +51,9 @@ const CreateDiaryBtn = styled.button`
   background-color: white;
   width: 135px;
   height: 31px;
-  font-family: 'Song Myung', serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-style: normal;
+  font-weight: 300;
   font-size: 16px;
   border: 1px solid #d9d9d9;
   box-sizing: border-box;
@@ -82,9 +84,9 @@ const CustomTabs = styled(Tabs)`
   }
 
   .ant-tabs-tab {
-    font-family: 'Song Myung', serif;
-    font-weight: '300';
+    font-family: 'IBM Plex Sans KR', sans-serif;
     font-style: normal;
+    font-weight: 300;
     font-size: 16px;
     padding: 6px 18px !important;
     border-bottom: none !important;

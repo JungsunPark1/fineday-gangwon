@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  background-color: rgba(17, 176, 238, 0.484);
+  background-color: rgba(65, 62, 88, 0.5);
   width: 48%;
   max-width: 750px;
   box-sizing: border-box;
@@ -12,7 +12,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   /* text-shadow: 2px 2px 4px #000000; */
-  color: #000000;
 
   @media screen and (max-width: 768px) {
     width: 38%;
@@ -74,6 +73,7 @@ const LinkContainer = styled.div`
   /* background-color: blue; */
   text-align: center;
   font-size: 22px;
+  font-weight: 300;
 
   @media screen and (max-width: 1023px) {
     font-size: 22px;
@@ -98,10 +98,11 @@ const GuestLink = styled.a`
   &::after {
     content: '';
     position: absolute;
-    background: #000000;
+    background: #fff;
     opacity: 0.5;
     height: 2px;
     bottom: -6px;
+    color: #ffffff;
     width: 100%;
     left: 0;
     transition: all 0.3s ease;
@@ -115,7 +116,6 @@ const GuestLink = styled.a`
     background: #ffffff;
   }
   &:hover {
-    color: #fff;
     font-weight: bold;
   }
 `;
@@ -133,7 +133,7 @@ const HomeText = () => {
 
       <LinkContainer>
         <GuestLink onClick={() => navigate(`/main?tab=1`)}>
-          추세 확인하기
+          차트 확인하기
         </GuestLink>
       </LinkContainer>
     </Container>

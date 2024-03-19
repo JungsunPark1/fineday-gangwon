@@ -15,7 +15,6 @@ const Container = styled.div`
   gap: 8px;
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px 4px #000000;
 
   @media screen and (max-width: 768px) {
     padding-top: 20px;
@@ -31,11 +30,9 @@ const Container = styled.div`
 `;
 
 const StyledCurrentDateTime = styled.p`
-  font-family: 'Song Myung', serif;
-  font-weight: bold;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: 300;
   font-size: 24px;
 
   @media screen and (max-width: 1023px) {

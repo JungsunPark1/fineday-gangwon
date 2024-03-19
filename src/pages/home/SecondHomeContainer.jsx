@@ -6,12 +6,14 @@ import HomeText from './components/HomeText';
 const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Song Myung', serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-style: normal;
+  font-weight: 300;
 `;
 
 const ContentsContainer = styled.div`
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); */
   width: 94vw;
   max-width: 1200px;
   margin: 0 auto;
@@ -30,12 +32,11 @@ const TextBox = styled.div`
   margin: 0 auto;
   padding: 0 40px;
   border-radius: 30px;
-  background-color: rgba(17, 176, 238, 0.484);
+  background-color: rgba(65, 62, 88, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   box-sizing: border-box;
-  text-shadow: 2px 2px 4px #000000;
   color: #ffffff;
 
   @media screen and (max-width: 768px) {
@@ -54,7 +55,7 @@ const FlexLine = styled.div`
   background: #ffffff;
   opacity: 0.5;
   width: 100%;
-  box-shadow: 2px 2px 4px #000000;
+  /* box-shadow: 2px 2px 4px #000000; */
 
   @media screen and (max-width: 550px) {
     display: none;
@@ -103,9 +104,10 @@ const SubText = styled.p`
 `;
 
 const BottomContainer = styled.div`
-  font-family: 'Song Myung', serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
+  color: #ffffff;
   box-sizing: border-box;
   width: 100%;
   height: 45vh;

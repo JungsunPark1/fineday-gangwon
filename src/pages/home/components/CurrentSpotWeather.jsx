@@ -10,15 +10,16 @@ import { specialDate, specialTime } from '../../../lib/utils/date';
 const Container = styled.div`
   width: 100%;
   color: #ffffff;
-  font-family: 'Song Myung', serif;
+  font-family: 'IBM Plex Sans KR', sans-serif;
   font-style: normal;
+  font-weight: 300;
   font-size: 24px;
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
-  text-shadow: 2px 2px 4px #000000;
+  /* text-shadow: 2px 2px 4px #000000; */
 `;
 
 const TextContainer = styled.div`
