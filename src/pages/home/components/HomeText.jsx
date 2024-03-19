@@ -84,6 +84,7 @@ const LinkContainer = styled.div`
     font-size: 18px;
     /* margin-top: 16px; */
     margin-bottom: 16px;
+    padding-bottom: 16px;
   }
   @media screen and (max-width: 375px) {
   }
