@@ -1,7 +1,12 @@
 # 강원도 맑은 날에
 
-![Alt Text](./introduce/project1.gif)
+![Alt Text](./introduce/new.gif)
+<br>
 <b>프로젝트 미리보기 </b>
+
+![Alt Text](./introduce/mobile.gif)
+<br>
+<b>모바일 버전 미리보기</b>
 
 <!-- <p align="center">
   <br>
@@ -32,7 +37,7 @@ https://jungsunpark1.github.io/fineday-gangwon/
 
 ## 프로젝트 진행 과정 정리 및 문제 해결 과정
 
-https://bit.ly/3P7Xbfw
+https://jsp0422.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8
 
 <br>
 
@@ -68,13 +73,13 @@ https://bit.ly/3P7Xbfw
 #### 홈 페이지 1 기능
 
  <br>
-  <img src="./introduce/slides/slide1.png">
+  <img src="./introduce/slides/new1.png">
   <br>
 
 #### 홈 페이지 1 상세 코드
 
    <br>
-  <img src="./introduce/slides/slide2.png">
+  <img src="./introduce/slides/new2.png">
   <br>
 
 #### 📍 홈 페이지 2 기능
@@ -116,7 +121,7 @@ https://bit.ly/3P7Xbfw
 #### 📍 기록 작성 페이지 기능
 
    <br>
-  <img src="./introduce/slides/slide9.png">
+  <img src="./introduce/slides/new9.png">
   <br>
 
 #### 📍 기록 수정 페이지 기능
@@ -125,7 +130,13 @@ https://bit.ly/3P7Xbfw
   <img src="./introduce/slides/slide10.png">
   <br>
 
-  ![Alt Text](./introduce/project.gif)
+![Alt Text](./introduce/new.gif)
+<br>
+<b>프로젝트 미리보기 </b>
+
+![Alt Text](./introduce/mobile.gif)
+<br>
+<b>모바일 버전 미리보기</b>
 
 <!--  -->
 
@@ -133,4 +144,4 @@ https://bit.ly/3P7Xbfw
 [html]: ./introduce/icons/html.svg
 [css]: ./introduce/icons/css.svg
 [react]: ./introduce/icons/react.svg
-[node]: /images/stack/node.svg
+[node]: ./introduce/icons/node.svg
